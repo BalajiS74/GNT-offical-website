@@ -1,0 +1,10 @@
+.course-card {
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  border: 2px solid #68d53d; /* green border */
+  box-shadow: 0 0 12px rgba(104, 213, 61, 0.4); /* subtle glow */
+}
