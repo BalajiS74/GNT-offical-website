@@ -1,0 +1,96 @@
+/* BACKGROUND */
+.register-bg {
+  background: linear-gradient(to right, #f7f7f7, #eef7ea);
+}
+
+/* CARD */
+.register-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+/* HOVER CARD */
+.register-card:hover {
+  transform: translateY(-5px);
+}
+
+/* INPUT STYLE */
+.custom-input {
+  border-radius: 8px !important;
+  padding: 10px !important;
+  border: 1px solid #ddd !important;
+  transition: 0.3s ease !important;
+}
+
+/* INPUT FOCUS */
+.custom-input:focus {
+  border-color: #3a7b20 !important;
+  box-shadow: 0 0 8px rgba(58, 123, 32, 0.2) !important;
+}
+
+/* BUTTON */
+.submit-btn {
+  background: #3a7b20 !important;
+  border: none !important;
+  padding: 8px 25px !important;
+  font-size: 15px !important;
+  border-radius: 8px !important;
+  transition: 0.3s ease !important;
+}
+
+/* BUTTON HOVER */
+.submit-btn:hover {
+  background: #2e5f18 !important;
+  transform: scale(1.05);
+}
+
+/* FLOATING IMAGE */
+.floating-img {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ANIMATIONS */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* KEYFRAMES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

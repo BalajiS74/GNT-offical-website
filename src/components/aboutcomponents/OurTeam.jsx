@@ -1,6 +1,4 @@
-import React from "react";
-import gntgroup from "../../assets/about/gntgroup.jpg"; // 🔥 replace with your actual group photo path
-
+import gntgroup from "../../assets/about/gntgroup.jpg";
 export const OurTeam = () => {
   return (
     <section className="container my-5 text-center">

@@ -1,141 +1,121 @@
-import React from "react";
+import React, { useState } from "react";
 import application from "../assets/servicesimages/application.png";
+import "./applyjob.css"; // 👈 add this
 
 const ApplyJob = () => {
+  const [step, setStep] = useState(1);
+
   return (
-    <section className="container my-5">
-      {/* Title */}
-      <h2 className="text-center fw-bold mb-5" style={{ fontSize: "32px" }}>
-        Job <span style={{ color: "#68D53D" }}>Apply</span>{" "}
-        <span role="img" aria-label="suit">
-          🕴️
-        </span>
-      </h2>
+    <section className="apply-bg py-5">
+      <div className="container">
+        {/* Heading */}
+        <h2 className="text-center mb-5 fade-in">
+          Job <span className="text-success">Apply</span> 🕴️
+        </h2>
 
-      {/* Two-column layout */}
-      <div className="row align-items-center">
-        {/* Left side image */}
-        <div className="col-md-6 mb-4 mb-md-0 text-center">
-          <img
-            src={application}
-            alt="Job application illustration"
-            className="img-fluid rounded-4 "
-          />
-        </div>
+        <div className="row align-items-center justify-content-center">
+          {/* LEFT IMAGE */}
+          <div className="col-lg-6 text-center mb-4 mb-lg-0">
+            <img
+              src={application}
+              alt="application"
+              className="img-fluid floating-img"
+              style={{ maxWidth: "95%" }}
+            />
+          </div>
 
-        {/* Right side form */}
-        <div className="col-md-6">
-          <form
-            className="p-3 rounded-4 shadow-lg bg-light"
-            style={{ maxWidth: "90%" }}
-          >
-            {/* Full name */}
-            <div className="mb-3">
-              <label
-                className="form-label fw-semibold"
-                style={{ fontSize: "16px" }}
-              >
-                Full name
-              </label>
-              <input
-                type="text"
-                className="form-control border-success p-2"
-                placeholder="Enter your full name"
-              />
+          {/* RIGHT FORM */}
+          <div className="col-lg-6">
+            <div className="form-card fade-up">
+              {/* Step Indicator */}
+              <div className="text-center mb-4">
+                <small>Step {step} of 3</small>
+
+                <div className="progress mt-2" style={{ height: "8px" }}>
+                  <div
+                    className="progress-bar progress-anim"
+                    style={{
+                      width: `${(step / 3) * 100}%`,
+                    }}
+                  ></div>
+                </div>
+              </div>
+
+              {/* FORM CONTENT */}
+              <div key={step} className="step-anim">
+                {/* STEP 1 */}
+                {step === 1 && (
+                  <>
+                    <input
+                      type="text"
+                      placeholder="Full Name"
+                      className="form-control mb-3 custom-input"
+                    />
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      className="form-control mb-3 custom-input"
+                    />
+                    <input
+                      type="tel"
+                      placeholder="Phone"
+                      className="form-control mb-3 custom-input"
+                    />
+                  </>
+                )}
+
+                {/* STEP 2 */}
+                {step === 2 && (
+                  <>
+                    <select className="form-select mb-3 custom-input">
+                      <option>Select Position</option>
+                      <option>Frontend Developer</option>
+                      <option>Backend Developer</option>
+                      <option>Full Stack Developer</option>
+                      <option>UI/UX Designer</option>
+                    </select>
+
+                    <input
+                      type="file"
+                      className="form-control mb-3 custom-input"
+                    />
+                  </>
+                )}
+
+                {/* STEP 3 */}
+                {step === 3 && (
+                  <textarea
+                    rows="5"
+                    placeholder="Cover Letter..."
+                    className="form-control mb-3 custom-input"
+                  ></textarea>
+                )}
+              </div>
+
+              {/* BUTTONS */}
+              <div className="d-flex justify-content-between mt-4">
+                {step > 1 && (
+                  <button
+                    className="btn btn-outline-secondary px-4"
+                    onClick={() => setStep(step - 1)}
+                  >
+                    Back
+                  </button>
+                )}
+
+                {step < 3 ? (
+                  <button
+                    className="btn next-btn px-4"
+                    onClick={() => setStep(step + 1)}
+                  >
+                    Next →
+                  </button>
+                ) : (
+                  <button className="btn submit-btn w-100">Submit ✔</button>
+                )}
+              </div>
             </div>
-
-            {/* Email */}
-            <div className="mb-3">
-              <label
-                className="form-label fw-semibold"
-                style={{ fontSize: "16px" }}
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                className="form-control border-success p-2"
-                placeholder="Enter your email"
-              />
-            </div>
-
-            {/* Phone number */}
-            <div className="mb-3">
-              <label
-                className="form-label fw-semibold"
-                style={{ fontSize: "16px" }}
-              >
-                Phone number
-              </label>
-              <input
-                type="tel"
-                className="form-control border-success p-2"
-                placeholder="Enter your phone number"
-              />
-            </div>
-
-            {/* Position selection */}
-            <div className="mb-3">
-              <label
-                className="form-label fw-semibold"
-                style={{ fontSize: "16px" }}
-              >
-                Position applying for
-              </label>
-              <select className="form-select border-success p-2">
-                <option value="">Select a position</option>
-                <option value="frontend">Frontend Developer</option>
-                <option value="backend">Backend Developer</option>
-                <option value="fullstack">Full Stack Developer</option>
-                <option value="uiux">UI/UX Designer</option>
-                <option value="marketing">Digital Marketing</option>
-              </select>
-            </div>
-
-            {/* Resume upload */}
-            <div className="mb-3">
-              <label
-                className="form-label fw-semibold"
-                style={{ fontSize: "16px" }}
-              >
-                Submit your resume
-              </label>
-              <input
-                type="file"
-                className="form-control border-success p-2"
-                accept=".pdf,.doc,.docx"
-              />
-            </div>
-
-            {/* Cover letter */}
-            <div className="mb-3">
-              <label
-                className="form-label fw-semibold"
-                style={{ fontSize: "16px" }}
-              >
-                Cover letter
-              </label>
-              <textarea
-                className="form-control border-success p-2"
-                rows="4"
-                placeholder="Write a short cover letter..."
-              ></textarea>
-            </div>
-
-            {/* Submit button */}
-            <button
-              type="submit"
-              className="btn w-100 fw-bold"
-              style={{
-                backgroundColor: "#63D13E",
-                color: "white",
-                fontSize: "18px",
-                padding: "10px",
-              }}
-            >
-              Submit Application
-            </button>
-          </form>
+          </div>
         </div>
       </div>
     </section>

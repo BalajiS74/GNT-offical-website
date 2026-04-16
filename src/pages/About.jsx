@@ -7,9 +7,9 @@ const about = () => {
   return (
     <div>
       <Whoweare />
-      <VisionMission/>
-      <Teammates/>
-      <OurTeam/>
+      <VisionMission />
+      <Teammates />
+      {/* <OurTeam/> */}
     </div>
   );
 };

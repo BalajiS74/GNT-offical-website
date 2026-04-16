@@ -10,7 +10,7 @@ export const Spltext = ({ type = "p", children, className, ...style }) => {
   const Tag = type; // assign tag
 
   return (
-    <Tag className={className} style={{ color: "#68D53D" }}>
+    <Tag className={className} style={{ color: "#3a7b20" }}>
       {children}
     </Tag>
   );

@@ -1,0 +1,83 @@
+/* WRAPPER */
+.navbar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}
+
+/* NAVBAR */
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  padding: 12px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  animation: slideDown 0.6s ease;
+}
+
+/* LOGO */
+.logo-anim {
+  transition: 0.3s;
+}
+
+.logo-anim:hover {
+  transform: scale(1.05);
+}
+
+/* NAV ITEMS */
+.nav-item-custom {
+  position: relative;
+  font-size: 16px;
+  color: #000 !important;
+  transition: 0.3s;
+}
+
+/* ACTIVE */
+.nav-item-custom.active {
+  color: #3a7b20 !important;
+}
+
+/* UNDERLINE ANIMATION */
+.nav-item-custom::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #3a7b20;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+.nav-item-custom:hover::after {
+  width: 100%;
+}
+
+/* BUTTON HOVER */
+.btn-hover:hover {
+  transform: translateY(-2px);
+  transition: 0.3s;
+}
+
+/* SLIDE DOWN */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE FIX */
+@media (max-width: 991px) {
+  .custom-navbar {
+    border-radius: 10px;
+  }
+
+  .nav-item-custom {
+    padding: 10px 0;
+  }
+}

@@ -2,5 +2,189 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent side scroll */
+}
+
+/* hide scrollbar but keep scroll */
+body::-webkit-scrollbar {
+  display: none;
+}
+.custom-input {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.custom-input:focus {
+  border-color: #3a7b20;
+  box-shadow: 0 0 0 0.1rem rgba(104, 213, 61, 0.2);
+  outline: none;
+}
+
+/* Calendar styling */
+.custom-calendar {
+  border: none !important;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Optional hover */
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(104, 213, 61, 0.3);
+}
+.hero-img {
+  width: 100%;
+  max-width: 750px; /* 🔥 bigger image */
+  object-fit: contain;
+}
+
+/* =----------------------------------------------------- */
+/* SECTION */
+
+/* TEXT ANIMATION */
+.hero-text {
+  animation: fadeSlideLeft 1s ease forwards;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+}
+
+.highlight {
+  color: #c8a646;
+}
+
+/* SUBTEXT */
+.hero-subtext {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* BUTTON */
+.hero-btn {
+  margin-top: 20px;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 0.8s;
+}
+
+/* IMAGE */
+.hero-img {
+  max-width: 650px;
+  animation:
+    floatImage 4s ease-in-out infinite,
+    fadeSlideRight 1s ease forwards;
+}
+
+/* ANIMATIONS */
+@keyframes fadeSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* FLOAT EFFECT */
+@keyframes floatImage {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* BUTTON HOVER */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --------------------------- */
+.course-card {
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.course-icon {
+  font-size: 28px;
+  color: #198754; /* Bootstrap green */
+  transition: 0.3s;
+}
+
+/* Hover */
+.course-card:hover {
+  transform: translateY(-5px);
+  background-color: #198754;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.course-card:hover .course-icon {
+  color: white;
+  transform: scale(1.2);
+}
+/* -------------------- */
+/* CARD */
+.career-card {
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+.career-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* BUTTON */
+.btn-success {
+  background-color: #198754;
+  border: none;
+}
+/* ------------------------------------------ */
+.team-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+/* Hover */
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
 }

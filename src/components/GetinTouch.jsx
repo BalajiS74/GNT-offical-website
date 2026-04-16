@@ -5,7 +5,7 @@ const GetinTouch = () => {
     <section className="container my-5">
       {/* Title */}
       <h2 className="text-center fw-bold mb-4">
-        get in <span style={{ color: "#63D13E" }}>touch</span>
+        get in <span style={{ color: "#3a7b20" }}>touch</span>
       </h2>
 
       {/* Contact Form */}
@@ -40,7 +40,7 @@ const GetinTouch = () => {
         <button
           type="submit"
           className="btn"
-          style={{ backgroundColor: "#63D13E", color: "white", width: "100%" }}
+          style={{ backgroundColor: "#3a7b20", color: "white", width: "100%" }}
         >
           Submit
         </button>
@@ -56,7 +56,7 @@ const GetinTouch = () => {
         <Link to={"/ApplyJob"}>
           <button
             className="btn"
-            style={{ backgroundColor: "#63D13E", color: "white" }}
+            style={{ backgroundColor: "#3a7b20", color: "white" }}
           >
             Click here to apply job
           </button>

@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import SafeZone from "./global/SafeZone";
 import GlobalBtn from "./global/GlobalBtn";
 import { Spltext } from "./global/Gtext";
+import "./navbar.css"; // 👈 add this
 
 const Navitem = ({ name, path }) => {
   return (
@@ -11,10 +12,7 @@ const Navitem = ({ name, path }) => {
       as={NavLink}
       to={path}
       end={path === "/"}
-      className="fs-5"
-      style={({ isActive }) => ({
-        color: isActive ? "#68D53D" : "#000000",
-      })}
+      className="nav-item-custom"
     >
       {name}
     </Nav.Link>
@@ -23,37 +21,33 @@ const Navitem = ({ name, path }) => {
 
 const Navbar = () => {
   return (
-    <div className="bg-white">
+    <div className="navbar-wrapper">
       <SafeZone>
-        <BSNavbar
-          expand="lg"
-          className="px-4 py-3 shadow-sm border-2 border-secondary rounded-4"
-        >
+        <BSNavbar expand="lg" className="custom-navbar">
           <Container fluid>
             {/* Logo */}
-            <BSNavbar.Brand as={NavLink} to="/">
-              <Spltext type="h4" className="fw-bold fs-3">
-                GrowthNest
+            <BSNavbar.Brand as={NavLink} to="/" className="logo-anim">
+              <Spltext type="h4" className="fw-bold fs-4">
+                GrowthNest Tech
               </Spltext>
             </BSNavbar.Brand>
 
-            {/* Toggle button (mobile) */}
+            {/* Toggle */}
             <BSNavbar.Toggle aria-controls="main-navbar" />
 
-            {/* Collapsible content */}
             <BSNavbar.Collapse id="main-navbar">
               {/* Center Nav */}
-              <Nav className="mx-auto text-center d-flex gap-5">
+              <Nav className="mx-auto text-center gap-lg-5">
                 <Navitem path="/" name="Home" />
-                <Navitem path="/about" name="About" />
                 <Navitem path="/service" name="Services" />
-                {/* <Navitem path="/course" name="Course" /> */}
+                <Navitem path="/Career" name="Career" />
+                <Navitem path="/about" name="About" />
               </Nav>
 
-              {/* Right Button */}
+              {/* Button */}
               <div className="d-flex justify-content-center mt-3 mt-lg-0">
-                <Link to="/GetinTouch">
-                  <GlobalBtn btnName="Contact" px={5} py={2} />
+                <Link to="/GetinTouch" className="btn-hover">
+                  <GlobalBtn btnName="Contact" px={4} py={2} />
                 </Link>
               </div>
             </BSNavbar.Collapse>
