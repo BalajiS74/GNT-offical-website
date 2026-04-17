@@ -31,7 +31,7 @@ export const Teammates = () => {
                 alt={member.name}
                 className="card-img-top"
                 style={{
-                  height: "280px",
+                  height: "310px",
                   objectFit: "cover",
                   borderRadius: "12px 12px 0 0",
                 }}
