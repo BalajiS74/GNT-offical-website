@@ -16,9 +16,9 @@ export const Teammates = () => {
   return (
     <section className="container py-5">
       {/* Heading */}
-      <h3 className="text-center fw-bold mb-4">
-        Our <span className="text-success">Leadership</span> Team
-      </h3>
+      <h2 className="text-center fw-bold mb-4">
+        Our <span style={{ color: "#3a7b20" }}>Team</span>
+      </h2>
 
       <div className="row g-5 justify-content-center">
         {team.map((member, index) => (

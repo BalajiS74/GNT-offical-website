@@ -2,7 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family:
+    Google Sans,
+    Noto Sans,
+    Noto Sans JP,
+    Noto Sans KR,
+    Noto Naskh Arabic,
+    Noto Sans Thai,
+    Noto Sans Hebrew,
+    Noto Sans Bengali,
+    sans-serif;
 }
 html,
 body {

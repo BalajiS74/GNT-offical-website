@@ -234,7 +234,7 @@ const Services = () => {
                     height: "300px",
                     background:
                       "radial-gradient(circle, rgba(58,123,32,0.1) 0%, rgba(58,123,32,0) 70%)",
-                    top: "50%",
+                    top: "10%",
                     left: "50%",
                     transform: "translate(-50%, -50%)",
                     animation: "pulse 3s ease-in-out infinite",
@@ -245,7 +245,7 @@ const Services = () => {
                   alt="Startup illustration"
                   className="img-fluid position-relative"
                   style={{
-                    maxHeight: "450px",
+                    maxHeight: "550px",
                     objectFit: "contain",
                     animation: isVisible
                       ? "float 4s ease-in-out infinite"

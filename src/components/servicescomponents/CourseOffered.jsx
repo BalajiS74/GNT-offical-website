@@ -12,6 +12,7 @@ import {
   FaChartBar,
   FaDatabase,
   FaMobileAlt,
+  FaShieldAlt, // ✅ Added for Cyber Security
 } from "react-icons/fa";
 
 const CourseOffered = () => {
@@ -28,6 +29,7 @@ const CourseOffered = () => {
     { name: "Data Science", icon: <FaDatabase /> },
     { name: "Flutter", icon: <FaMobileAlt /> },
     { name: "React Native with Expo", icon: <FaMobileAlt /> },
+    { name: "Cyber Security", icon: <FaShieldAlt /> }, // ✅ New course added
   ];
 
   return (

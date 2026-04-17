@@ -14,7 +14,7 @@ const GetinTouch = () => {
           <label className="form-label">Full name</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control custom-input"
             placeholder="Enter your name"
           />
         </div>
@@ -23,7 +23,7 @@ const GetinTouch = () => {
           <label className="form-label">Email</label>
           <input
             type="email"
-            className="form-control"
+            className="form-control custom-input"
             placeholder="Enter your email"
           />
         </div>
@@ -31,7 +31,7 @@ const GetinTouch = () => {
         <div className="mb-3">
           <label className="form-label">Message</label>
           <textarea
-            className="form-control"
+            className="form-control custom-input"
             rows="4"
             placeholder="Write your message"
           ></textarea>
