@@ -9,9 +9,9 @@ const Whoweare = () => {
       <div className="row align-items-center">
         {/* LEFT - TEXT */}
         <div className="col-md-6 fade-left">
-          <h2 className="fw-bold mb-4 display-5">
+          <h1 className="fw-bold mb-4 display-5">
             Who We <span className="text-success">are?</span>
-          </h2>
+          </h1>
 
           <p className="mb-4 lead text-muted">
             We are a team of passionate individuals dedicated to empowering

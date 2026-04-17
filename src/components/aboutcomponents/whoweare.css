@@ -1,13 +1,16 @@
-/* IMAGE */
 .about-img {
-  max-height: 420px;
-  object-fit: contain;
-  transition: 0.4s ease;
+  width: 110%; /* make image larger but still responsive */
+  max-width: 600px; /* prevent it from stretching too much */
+  transition: 0.3s ease;
 }
 
-/* IMAGE HOVER */
 .about-img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* subtle hover zoom */
+}
+
+.lead.text-muted {
+  font-size: 1.25rem; /* larger paragraph text */
+  line-height: 1.8; /* better readability */
 }
 
 /* LEFT ANIMATION */

@@ -4,31 +4,16 @@ import { MdOutlineEmail } from "react-icons/md";
 import { Link } from "react-router";
 import mapimage from "../assets/map.png";
 
-const handleClick = (platform) => {
-  switch (platform) {
-    case "instagram":
-      window.open("https://www.instagram.com/growth_nest_tech_solution/");
-      break;
-    case "linkedin":
-      window.open("https://linkedin.com/in/yourprofile");
-      break;
-    case "facebook":
-      window.open("https://facebook.com/yourprofile");
-      break;
-    case "email":
-      window.location.href = "mailto:prabhassurya601@gmail.com";
-      break;
-    default:
-      break;
-  }
-};
-
 const icons = [
-  { Icon: FaInstagram, link: "https://instagram.com/yourprofile" },
+  {
+    Icon: FaInstagram,
+    link: "https://www.instagram.com/growth_nest_tech_solution/",
+  },
   { Icon: FaLinkedin, link: "https://linkedin.com/in/yourprofile" },
   { Icon: FaFacebook, link: "https://facebook.com/yourprofile" },
   { Icon: MdOutlineEmail, link: "mailto:prabhassurya601@gmail.com" },
 ];
+
 const Footerbar = () => {
   return (
     <footer
@@ -39,11 +24,10 @@ const Footerbar = () => {
       }}
     >
       <div className="container">
-        <div className="row g-4">
+        <div className="row g-4 text-center text-md-start">
           {/* COLUMN 1 */}
-          <div className="col-md-3">
+          <div className="col-12 col-md-3">
             <h4 className="fw-bold mb-3">GROWTHNEST</h4>
-
             {[
               { name: "Home", path: "/" },
               { name: "About", path: "/about" },
@@ -58,9 +42,8 @@ const Footerbar = () => {
           </div>
 
           {/* COLUMN 2 */}
-          <div className="col-md-3">
+          <div className="col-12 col-md-3">
             <h5 className="fw-semibold mb-3">Courses</h5>
-
             {[
               "Python / Java Full Stack",
               "UI/UX Design",
@@ -75,10 +58,9 @@ const Footerbar = () => {
           </div>
 
           {/* COLUMN 3 */}
-          <div className="col-md-3">
+          <div className="col-12 col-md-3">
             <h5 className="fw-semibold mb-3">Connect</h5>
-
-            <div className="d-flex gap-3 mb-3">
+            <div className="d-flex justify-content-center justify-content-md-start gap-3 mb-3 flex-wrap">
               {icons.map(({ Icon, link }, i) => (
                 <a
                   key={i}
@@ -86,9 +68,8 @@ const Footerbar = () => {
                   target={link.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
                   className="social-icon"
-                  style={{ cursor: "pointer", color: "#333" }}
                 >
-                  <Icon size={28} />
+                  <Icon size={24} />
                 </a>
               ))}
             </div>
@@ -97,7 +78,7 @@ const Footerbar = () => {
           </div>
 
           {/* COLUMN 4 - MAP */}
-          <div className="col-md-3 text-center">
+          <div className="col-12 col-md-3 text-center">
             <img
               src={mapimage}
               alt="map"
@@ -108,8 +89,7 @@ const Footerbar = () => {
 
         {/* Bottom */}
         <hr className="my-4" style={{ opacity: "0.2" }} />
-
-        <p className="text-center mb-0" style={{ opacity: "0.8" }}>
+        <p className="text-center mb-0 small" style={{ opacity: "0.8" }}>
           © 2026 GrowthNest. All rights reserved.
         </p>
       </div>
@@ -123,42 +103,35 @@ const Footerbar = () => {
           opacity: 0.8;
           transition: 0.3s;
         }
-
         .footer-link:hover {
           opacity: 1;
           transform: translateX(5px);
         }
-
         .footer-text {
           opacity: 0.85;
-          font-size: 15px;
+          font-size: 14px;
         }
-
         .social-icon {
-          width: 45px;
-          height: 45px;
+          width: 40px;
+          height: 40px;
           display: flex;
           align-items: center;
           justify-content: center;
           background: rgba(255,255,255,0.15);
           border-radius: 50%;
-          font-size: 18px;
-          cursor: pointer;
           transition: 0.3s;
+          color: #fff;
         }
-
         .social-icon:hover {
           background: #fff;
           color: #3a7b20;
-          transform: scale(1.2) rotate(5deg);
+          transform: scale(1.15) rotate(5deg);
         }
-
         .footer-map {
-          height: 160px;
+          max-height: 160px;
           object-fit: cover;
           transition: 0.3s;
         }
-
         .footer-map:hover {
           transform: scale(1.05);
         }

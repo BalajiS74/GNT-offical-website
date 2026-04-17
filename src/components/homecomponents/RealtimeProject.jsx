@@ -294,7 +294,7 @@ const RealtimeProject = () => {
               {/* Right Content with Animation */}
               <Col md={5}>
                 <div
-                  className="text-center text-md-start"
+                  className="text-center text-md-start ms-3"
                   style={{
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible ? "translateX(0)" : "translateX(50px)",

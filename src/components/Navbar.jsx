@@ -12,7 +12,7 @@ const Navitem = ({ name, path }) => {
       as={NavLink}
       to={path}
       end={path === "/"}
-      className="nav-item-custom"
+      className="nav-item-custom fs-5"
     >
       {name}
     </Nav.Link>
@@ -27,7 +27,7 @@ const Navbar = () => {
           <Container fluid>
             {/* Logo */}
             <BSNavbar.Brand as={NavLink} to="/" className="logo-anim">
-              <Spltext type="h4" className="fw-bold fs-4">
+              <Spltext type="h4" className="fw-bold fs-3">
                 GrowthNest Tech
               </Spltext>
             </BSNavbar.Brand>
@@ -47,7 +47,7 @@ const Navbar = () => {
               {/* Button */}
               <div className="d-flex justify-content-center mt-3 mt-lg-0">
                 <Link to="/GetinTouch" className="btn-hover">
-                  <GlobalBtn btnName="Contact" px={4} py={2} />
+                  <GlobalBtn btnName="Contact" px={5} py={2} />
                 </Link>
               </div>
             </BSNavbar.Collapse>

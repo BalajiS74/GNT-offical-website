@@ -4,23 +4,24 @@ import managerImage from "../../assets/about/managerImage.jpeg";
 import appdev1 from "../../assets/about/appdev1.png";
 import websitedev from "../../assets/about/websitedev.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import uiuxdesigner from "../../assets/about/uiuxdesigner.png";
 export const Teammates = () => {
   const team = [
     { name: "Suriya Prabha S", role: "President, CEO", photo: ceoImage },
     { name: "Sathish", role: "HR Manager", photo: managerImage },
     { name: "Berlin ", role: "website Developer", photo: websitedev },
     { name: "Balaji S", role: "App Developer", photo: appdev1 },
+    { name: "shiyamala", role: "UI/UX Developer", photo: uiuxdesigner },
   ];
 
   return (
     <section className="container py-5">
       {/* Heading */}
-      <h2 className="text-center fw-bold mb-4">
+      <h1 className="text-center fw-bold mb-5">
         Our <span style={{ color: "#3a7b20" }}>Team</span>
-      </h2>
+      </h1>
 
-      <div className="row g-5 justify-content-center">
+      <div className="row g-5 justify-content-center mt-5">
         {team.map((member, index) => (
           <div className="col-10 col-sm-6 col-md-4 col-lg-3" key={index}>
             <div className="card border-0 shadow-sm team-card">

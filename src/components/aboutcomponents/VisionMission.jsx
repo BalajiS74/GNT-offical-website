@@ -5,9 +5,9 @@ const VisionMission = () => {
     <section className="py-5 vision-section">
       <div className="container">
         {/* Title */}
-        <h2 className="text-center fw-bold mb-5 fade-in">
+        <h1 className="text-center fw-bold mb-5 fade-in">
           More <span className="text-success">about</span> us 🌍
-        </h2>
+        </h1>
 
         <div className="row g-4">
           {/* Vision */}
@@ -17,7 +17,7 @@ const VisionMission = () => {
 
               <h4 className="fw-bold text-center mb-3">Vision</h4>
 
-              <p>
+              <p className="fs-5">
                 To build a dynamic IT ecosystem where innovative startups thrive
                 and aspiring professionals grow into skilled technology leaders,
                 driving digital transformation globally.
@@ -32,7 +32,7 @@ const VisionMission = () => {
 
               <h4 className="fw-bold text-center mb-3">Mission</h4>
 
-              <p>
+              <p className="fs-5">
                 To empower businesses by delivering cutting-edge IT solutions
                 while nurturing talent through career-focused training,
                 real-world project experience, and continuous learning —

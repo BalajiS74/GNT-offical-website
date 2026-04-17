@@ -6,10 +6,11 @@ import { Link } from "react-router";
 const FrontPage = () => {
   return (
     <div className="hero-section">
-      <Container className="py-5">
+      <Container className="py-2">
         <Row className="align-items-center justify-content-between">
           {/* LEFT CONTENT */}
           <Col
+            xs={12}
             md={5}
             className="text-center text-md-start mb-4 mb-md-0 hero-text"
           >
@@ -19,20 +20,21 @@ const FrontPage = () => {
               with us
             </h1>
 
-            <p className="text-muted mt-3 fs-5 hero-subtext">
+            {/* Increased text size */}
+            <p className="text-muted mt-3 fs-4 fs-md-3 hero-subtext">
               Are you finding difficulty in where & when
               <br />
               to start ?
             </p>
 
             <Link to={"Meet"}>
-              <div className="hero-btn">
+              <div className="hero-btn d-flex justify-content-center justify-content-md-start">
                 <GlobalBtn
                   btnName={"Meet"}
                   px={"5"}
                   style={{
-                    width: "260px",
-                    fontSize: "20px",
+                    width: "280px",
+                    fontSize: "22px",
                   }}
                 />
               </div>
@@ -40,8 +42,16 @@ const FrontPage = () => {
           </Col>
 
           {/* RIGHT IMAGE */}
-          <Col md={7} className="text-center">
-            <img src={homeFront} alt="hero" className="img-fluid hero-img" />
+          <Col xs={12} md={7} className="text-center">
+            <img
+              src={homeFront}
+              alt="hero"
+              className="img-fluid hero-img mb-4 mb-md-0"
+              style={{
+                maxWidth: "100%",
+                width: "90%", // larger image size
+              }}
+            />
           </Col>
         </Row>
       </Container>
