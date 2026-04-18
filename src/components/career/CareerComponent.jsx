@@ -14,7 +14,7 @@ import {
 } from "react-icons/fa";
 import { GiSkills } from "react-icons/gi";
 import { MdWork, MdSchool, MdVerified } from "react-icons/md";
-
+import { Link } from "react-router";
 const CareerComponent = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -46,160 +46,35 @@ const CareerComponent = () => {
   const jobCategories = {
     flutter: {
       icon: <FaMobile size={24} />,
-      name: "Flutter Developer",
       color: "#3a7b20",
       jobs: [
         {
           id: 1,
-          title: "Flutter Developer Intern",
+          title: "Trainer",
           level: "internship",
-          experience: "0-6 months",
-          salary: "₹15,000 - ₹25,000 / month",
+          experience: "1-2 Years",
+          salary: "₹10,000 above / Month",
           location: "Remote / Bangalore",
           type: "Internship",
-          skills: ["Flutter", "Dart", "Firebase", "REST API"],
+          skills: ["C", "C++", "Java"],
           description:
-            "Looking for passionate Flutter developers to learn and work on real-world mobile applications.",
-          openings: 5,
-          deadline: "2024-12-31",
+            "Dedicated Mentor committed to bridging the gap between theoretical knowledge and professional excellence through structured training, hands-on project guidance, and industry-aligned skill development.",
+          openings: 3,
+          deadline: "2026-05-31",
         },
         {
           id: 2,
           title: "Junior Flutter Developer",
           level: "fresher",
           experience: "0-1 year",
-          salary: "₹3.5 - ₹5 LPA",
+          salary: "₹15,000 to ₹20,000 / Month",
           location: "Bangalore",
           type: "Full-time",
           skills: ["Flutter", "Dart", "Git", "Provider/GetX"],
           description:
             "Entry-level position for freshers with Flutter knowledge. Great learning opportunity.",
           openings: 3,
-          deadline: "2024-12-15",
-        },
-        {
-          id: 3,
-          title: "Senior Flutter Developer",
-          level: "experience",
-          experience: "3-5 years",
-          salary: "₹12 - ₹18 LPA",
-          location: "Bangalore / Hyderabad",
-          type: "Full-time",
-          skills: [
-            "Flutter",
-            "Dart",
-            "Native iOS/Android",
-            "BLoC",
-            "Team Leadership",
-          ],
-          description:
-            "Experienced Flutter developer to lead mobile app development and mentor junior developers.",
-          openings: 2,
-          deadline: "2024-12-20",
-        },
-      ],
-    },
-    backend: {
-      icon: <FaServer size={24} />,
-      name: "Backend Developer",
-      color: "#3a7b20",
-      jobs: [
-        {
-          id: 4,
-          title: "Backend Developer Intern",
-          level: "internship",
-          experience: "0-6 months",
-          salary: "₹15,000 - ₹25,000 / month",
-          location: "Remote / Pune",
-          type: "Internship",
-          skills: ["Node.js", "Python", "MongoDB", "Express.js"],
-          description:
-            "Internship opportunity for backend enthusiasts to work on scalable server-side applications.",
-          openings: 4,
-          deadline: "2024-12-31",
-        },
-        {
-          id: 5,
-          title: "Junior Backend Developer",
-          level: "fresher",
-          experience: "0-1 year",
-          salary: "₹4 - ₹6 LPA",
-          location: "Pune",
-          type: "Full-time",
-          skills: ["Node.js", "Express", "PostgreSQL", "REST APIs"],
-          description:
-            "Fresher role for backend development with focus on API development and database management.",
-          openings: 3,
-          deadline: "2024-12-15",
-        },
-        {
-          id: 6,
-          title: "Senior Backend Engineer",
-          level: "experience",
-          experience: "4-7 years",
-          salary: "₹15 - ₹25 LPA",
-          location: "Bangalore / Remote",
-          type: "Full-time",
-          skills: ["Java/Go", "Microservices", "AWS", "Docker", "Kubernetes"],
-          description:
-            "Senior backend engineer to architect and build robust backend systems at scale.",
-          openings: 2,
-          deadline: "2024-12-20",
-        },
-      ],
-    },
-    frontend: {
-      icon: <FaLaptopCode size={24} />,
-      name: "Frontend Developer",
-      color: "#3a7b20",
-      jobs: [
-        {
-          id: 7,
-          title: "Frontend Developer Intern",
-          level: "internship",
-          experience: "0-6 months",
-          salary: "₹15,000 - ₹25,000 / month",
-          location: "Remote / Mumbai",
-          type: "Internship",
-          skills: ["React", "HTML/CSS", "JavaScript", "Tailwind"],
-          description:
-            "Internship for frontend enthusiasts to build responsive and interactive web applications.",
-          openings: 5,
-          deadline: "2024-12-31",
-        },
-        {
-          id: 8,
-          title: "Junior Frontend Developer",
-          level: "fresher",
-          experience: "0-1 year",
-          salary: "₹3.5 - ₹5.5 LPA",
-          location: "Mumbai",
-          type: "Full-time",
-          skills: ["React", "Redux", "TypeScript", "Next.js"],
-          description:
-            "Entry-level frontend position for passionate developers with React knowledge.",
-          openings: 4,
-          deadline: "2024-12-15",
-        },
-        {
-          id: 9,
-          title: "Senior Frontend Developer",
-          level: "experience",
-          experience: "3-6 years",
-          salary: "₹12 - ₹20 LPA",
-          location: "Bangalore / Mumbai",
-          type: "Full-time",
-          skills: [
-            "React",
-            "Vue.js",
-            "TypeScript",
-            "Webpack",
-            "Performance Optimization",
-          ],
-          description:
-            "Senior frontend developer to lead UI development and implement best practices.",
-          openings: 2,
-          deadline: "2024-12-20",
+          deadline: "2026-06-15",
         },
       ],
     },
@@ -510,6 +385,50 @@ const CareerComponent = () => {
         </div>
 
         {/* Benefits Section */}
+
+        {/* CTA Section */}
+        <div
+          className="text-center mt-5 pt-4"
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? "translateY(0)" : "translateY(30px)",
+            transition: "all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s",
+          }}
+        >
+          <div
+            className="p-4 rounded-4"
+            style={{
+              background: "#aabda7",
+              border: "1px solid #222",
+            }}
+          >
+            <p className="text-black mb-3">Don't see the perfect role?</p>
+            <Link to="/ApplyJob">
+              <button
+                className="btn px-5 py-3 rounded-pill fw-bold"
+                style={{
+                  background: "transparent",
+                  border: "2px solid #3a7b20",
+                  color: "#3a7b20",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#3a7b20";
+                  e.currentTarget.style.color = "white";
+                  e.currentTarget.style.transform = "scale(1.05)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "#3a7b20";
+                  e.currentTarget.style.transform = "scale(1)";
+                }}
+              >
+                Send Your Resume →
+              </button>
+            </Link>
+          </div>
+        </div>
+
         <div
           className="mt-5 pt-5"
           style={{
@@ -569,47 +488,6 @@ const CareerComponent = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div
-          className="text-center mt-5 pt-4"
-          style={{
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible ? "translateY(0)" : "translateY(30px)",
-            transition: "all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s",
-          }}
-        >
-          <div
-            className="p-4 rounded-4"
-            style={{
-              background: "#111111",
-              border: "1px solid #222",
-            }}
-          >
-            <p className="text-white-50 mb-3">Don't see the perfect role?</p>
-            <button
-              className="btn px-5 py-3 rounded-pill fw-bold"
-              style={{
-                background: "transparent",
-                border: "2px solid #3a7b20",
-                color: "#3a7b20",
-                transition: "all 0.3s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#3a7b20";
-                e.currentTarget.style.color = "white";
-                e.currentTarget.style.transform = "scale(1.05)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "transparent";
-                e.currentTarget.style.color = "#3a7b20";
-                e.currentTarget.style.transform = "scale(1)";
-              }}
-            >
-              Send Your Resume →
-            </button>
           </div>
         </div>
       </div>

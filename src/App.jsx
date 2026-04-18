@@ -9,6 +9,7 @@ import Meet from "./components/Meet";
 import RegisterPage from "./components/RegisterPage";
 import NotFound from "./components/NotFound";
 import Career from "./pages/Career";
+import Events from "./pages/Events";
 function App() {
   return (
     <HashRouter>
@@ -22,6 +23,7 @@ function App() {
           <Route path="ApplyJob" element={<ApplyJob />} />
           <Route path="Meet" element={<Meet />} />
           <Route path="RegisterPage" element={<RegisterPage />} />
+          <Route path="Events" element={<Events />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

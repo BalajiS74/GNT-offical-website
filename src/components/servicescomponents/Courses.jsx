@@ -55,7 +55,7 @@ const Courses = () => {
   const coursePlans = [
     {
       title: "3 Months Program",
-      price: "₹15,000 + Job (₹5k/month)",
+      price: "₹15,000 + Job (₹5k/month fees)",
       description: "Fast-track training with job opportunity.",
       features: [
         "Job support",
@@ -66,7 +66,7 @@ const Courses = () => {
     },
     {
       title: "1 Year Program",
-      price: "₹2,200 / year",
+      price: "₹1,200/Month + Job)",
       description: "For 2nd, 3rd & final year students.",
       features: [
         "Long-term learning",
@@ -75,28 +75,34 @@ const Courses = () => {
       ],
     },
     {
-      title: "1 Month Basic",
-      price: "₹1,000",
+      title: "2 Months Course",
+      price: "₹5,000/Month",
+      description: "Intermediate level skill development.",
+      features: [
+        "Skill-based training",
+        "Project work",
+        "Flexible duration",
+        "Certificate",
+      ],
+    },
+    {
+      title: "2 Month Basic",
+      price: "₹3,000/Month",
       description: "Excel, Word & basic computer skills.",
       features: [
         "Beginner friendly",
         "Office tools training",
         "Quick completion",
+        "Certificate",
       ],
-    },
-    {
-      title: "4–6 Months Course",
-      price: "₹5,000",
-      description: "Intermediate level skill development.",
-      features: ["Skill-based training", "Project work", "Flexible duration"],
     },
   ];
 
   return (
     <div className="py-5" style={{ background: "#f5f5f5" }}>
-      <h2 className="text-center mb-5">
-        Our <span style={{ color: "#3a7b20" }}>Courses</span>
-      </h2>
+      <h1 className="text-center mb-5">
+        Courses <span style={{ color: "#3a7b20" }}>Structure</span>
+      </h1>
 
       <div className="d-flex flex-wrap justify-content-center gap-4">
         {coursePlans.map((plan, index) => (

@@ -5,13 +5,23 @@ import appdev1 from "../../assets/about/appdev1.png";
 import websitedev from "../../assets/about/websitedev.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import uiuxdesigner from "../../assets/about/uiuxdesigner.png";
+import admin1 from "../../assets/about/admin1.png";
+import digitalmarketing from "../../assets/about/digitalmarketing.jpeg";
+import admin2 from "../../assets/about/admin2.jpeg"
 export const Teammates = () => {
   const team = [
-    { name: "Suriya Prabha S", role: "President, CEO", photo: ceoImage },
-    { name: "Sathish", role: "HR Manager", photo: managerImage },
-    { name: "Berlin ", role: "website Developer", photo: websitedev },
+    { name: "Sathish", role: "CEO", photo: managerImage },
+    { name: "Berlin ", role: "Full stack Developer", photo: websitedev },
+    { name: "shiyamala", role: "Designer", photo: uiuxdesigner },
     { name: "Balaji S", role: "App Developer", photo: appdev1 },
-    { name: "shiyamala", role: "UI/UX Developer", photo: uiuxdesigner },
+    { name: "Jothi", role: "Admin", photo: admin1 },
+    {
+      name: "Suresh Kumar",
+      role: "Digital Marketing",
+      photo: digitalmarketing,
+    },
+    { name: "Surya Prabha ", role: "Growth Supporter", photo: ceoImage },
+    { name: "Venkadesh", role: "Growth Supporter", photo: admin2 },
   ];
 
   return (

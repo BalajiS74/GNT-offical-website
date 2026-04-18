@@ -14,9 +14,9 @@ const FrontPage = () => {
             md={5}
             className="text-center text-md-start mb-4 mb-md-0 hero-text"
           >
-            <h1 className="fw-bold hero-title">
+            <h1 className="fw-bold hero-title ls-wide" style={{fontFamily:""}}>
               Empower your <br />
-              career <span className="highlight">growth</span> <br />
+              career <span className="highlight">Growth</span> <br />
               with us
             </h1>
 
@@ -27,7 +27,7 @@ const FrontPage = () => {
               to start ?
             </p>
 
-            <Link to={"Meet"}>
+            <Link to={"Meet"} style={{textDecoration:"none"}}>
               <div className="hero-btn d-flex justify-content-center justify-content-md-start">
                 <GlobalBtn
                   btnName={"Meet"}

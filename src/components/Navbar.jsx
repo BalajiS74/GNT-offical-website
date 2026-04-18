@@ -28,8 +28,9 @@ const Navbar = () => {
             {/* Logo */}
             <BSNavbar.Brand as={NavLink} to="/" className="logo-anim">
               <Spltext type="h4" className="fw-bold fs-3">
-                GrowthNest Tech
+                GrowthNest 
               </Spltext>
+              <h3>Tech  Solution</h3>
             </BSNavbar.Brand>
 
             {/* Toggle */}
@@ -41,6 +42,7 @@ const Navbar = () => {
                 <Navitem path="/" name="Home" />
                 <Navitem path="/service" name="Services" />
                 <Navitem path="/Career" name="Career" />
+                <Navitem path="/Events" name="Events" />
                 <Navitem path="/about" name="About" />
               </Nav>
 

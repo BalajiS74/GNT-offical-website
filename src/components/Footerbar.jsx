@@ -9,9 +9,9 @@ const icons = [
     Icon: FaInstagram,
     link: "https://www.instagram.com/growth_nest_tech_solution/",
   },
-  { Icon: FaLinkedin, link: "https://linkedin.com/in/yourprofile" },
-  { Icon: FaFacebook, link: "https://facebook.com/yourprofile" },
-  { Icon: MdOutlineEmail, link: "mailto:prabhassurya601@gmail.com" },
+  { Icon: FaLinkedin, link: "" },
+  { Icon: FaFacebook, link: "" },
+  { Icon: MdOutlineEmail, link: "mailto:growthnesttechsolution@gmail.com" },
 ];
 
 const Footerbar = () => {
@@ -27,11 +27,13 @@ const Footerbar = () => {
         <div className="row g-4 text-center text-md-start">
           {/* COLUMN 1 */}
           <div className="col-12 col-md-3">
-            <h4 className="fw-bold mb-3">GROWTHNEST</h4>
+            <h5 className="fw-bold mb-3">Growth Nest Tech Solution</h5>
             {[
               { name: "Home", path: "/" },
-              { name: "About", path: "/about" },
               { name: "Service", path: "/service" },
+              { name: "Career", path: "/Career" },
+              { name: "Events", path: "/Events" },
+              { name: "About", path: "/about" },
             ].map((item) => (
               <p key={item.name} className="mb-2">
                 <Link to={item.path} className="footer-link">
@@ -73,17 +75,32 @@ const Footerbar = () => {
                 </a>
               ))}
             </div>
-            <p className="footer-text mb-1">📞 +91 63693 47439</p>
-            <p className="footer-text">📧 growthnest@gmail.com</p>
+            <p className="footer-text mb-1 text-black">📞 +91 63693 47439</p>
+            <p className="footer-text text-black">
+              📧 growthnesttechsolution@gmail.com
+            </p>
           </div>
 
-          {/* COLUMN 4 - MAP */}
+          {/* COLUMN 4 - GOOGLE MAP */}
           <div className="col-12 col-md-3 text-center">
-            <img
-              src={mapimage}
-              alt="map"
-              className="img-fluid rounded-4 shadow footer-map"
-            />
+            <div className="map-container rounded-4 overflow-hidden shadow footer-map">
+              <iframe
+                title="Growth Nest Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.48779149272636!2d77.41641077804206!3d8.710091416761001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0439003d56a7b7%3A0x2414b7237c95821!2sGrowthNest%20Tech%20Solution!5e0!3m2!1sen!2sin!4v1776495304307!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                width="100%"
+                height="160"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
 
@@ -97,6 +114,14 @@ const Footerbar = () => {
       {/* 🔥 CSS */}
       <style>
         {`
+        .map-container {
+  height: 160px;
+  transition: 0.3s;
+}
+
+.map-container:hover {
+  transform: scale(1.05);
+}
         .footer-link {
           text-decoration: none;
           color: #fff;
