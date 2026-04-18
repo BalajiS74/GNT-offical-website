@@ -14,7 +14,7 @@ const FrontPage = () => {
             md={5}
             className="text-center text-md-start mb-4 mb-md-0 hero-text"
           >
-            <h1 className="fw-bold hero-title ls-wide" style={{fontFamily:""}}>
+            <h1 className="fw-bold hero-title ls-wide">
               Empower your <br />
               career <span className="highlight">Growth</span> <br />
               with us

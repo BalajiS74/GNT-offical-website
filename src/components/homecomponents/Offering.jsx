@@ -28,20 +28,23 @@ const offerings = [
 
 const stats = [
   {
-    title: "Satisfaction",
-    value: "100%",
+    title: "User Satisfaction",
+    value: "99%",
+    dis: "Consistently high-rated experience",
     img: Satisfaction,
     gradient: "linear-gradient(135deg, #3a7b20, #4CAF50)",
   },
   {
-    title: "Learners",
+    title: "Active Learners",
     value: "50+",
+    dis: "Growing user base",
     img: learners,
     gradient: "linear-gradient(135deg, #d4a017, #f5c542)",
   },
   {
-    title: "Experts",
+    title: "Certified Experts",
     value: "10+",
+    dis: "Industry-qualified mentors",
     img: besttutor,
     gradient: "linear-gradient(135deg, #1a1a1a, #333)",
   },
@@ -117,6 +120,7 @@ const Offering = () => {
 
                 <h1>{item.value}</h1>
                 <p>{item.title}</p>
+                <p>{item.dis}</p>
               </motion.div>
             </Col>
           ))}
