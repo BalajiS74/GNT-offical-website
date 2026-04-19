@@ -41,14 +41,14 @@ const Navbar = () => {
               <Nav className="mx-auto text-center gap-lg-5">
                 <Navitem path="/" name="Home" />
                 <Navitem path="/service" name="Services" />
-                <Navitem path="/Career" name="Career" />
-                <Navitem path="/Events" name="Events" />
+                <Navitem path="/career" name="Career" />
+                <Navitem path="/events" name="Events" />
                 <Navitem path="/about" name="About" />
               </Nav>
 
               {/* Button */}
               <div className="d-flex justify-content-center mt-3 mt-lg-0">
-                <Link to="/GetinTouch" className="btn-hover">
+                <Link to="/getintouch" className="btn-hover">
                   <GlobalBtn btnName="Contact" px={5} py={2} />
                 </Link>
               </div>

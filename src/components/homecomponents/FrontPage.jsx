@@ -21,13 +21,13 @@ const FrontPage = () => {
             </h1>
 
             {/* Increased text size */}
-            <p className="text-muted mt-3 fs-4 fs-md-3 hero-subtext">
+            <p className="text-muted mt-3  fs-md-3 hero-subtext">
               Are you finding difficulty in where & when
               <br />
               to start ?
             </p>
 
-            <Link to={"Meet"} style={{textDecoration:"none"}}>
+            <Link to={"meet"} style={{ textDecoration: "none" }}>
               <div className="hero-btn d-flex justify-content-center justify-content-md-start">
                 <GlobalBtn
                   btnName={"Meet"}
@@ -36,6 +36,7 @@ const FrontPage = () => {
                     width: "280px",
                     fontSize: "22px",
                   }}
+                  className="front-btn"
                 />
               </div>
             </Link>

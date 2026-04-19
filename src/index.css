@@ -66,19 +66,26 @@ button:hover {
   animation: fadeSlideLeft 1s ease forwards;
 }
 
-.hero-title {
-  font-size: 3.2rem;
-}
-
 .highlight {
-  color:#3a7b20 ;
+  color: #3a7b20;
 }
 
 /* SUBTEXT */
+.hero-title {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
 .hero-subtext {
-  opacity: 0;
-  animation: fadeIn 1.5s ease forwards;
-  animation-delay: 0.5s;
+  font-size: 20px;
+}
+
+.hero-img {
+  width: 85%;
+  max-width: 650px;
+  animation:
+    floatImage 4s ease-in-out infinite,
+    fadeSlideRight 1s ease forwards;
 }
 
 /* BUTTON */
@@ -87,13 +94,46 @@ button:hover {
   animation: fadeIn 2s ease forwards;
   animation-delay: 0.8s;
 }
+/* Tablet (<= 991px) */
+@media (max-width: 991px) {
+  .hero-title {
+    font-size: 26px; /* decrease font */
+    text-align: start;
+  }
 
-/* IMAGE */
-.hero-img {
-  max-width: 650px;
-  animation:
-    floatImage 4s ease-in-out infinite,
-    fadeSlideRight 1s ease forwards;
+  .hero-subtext {
+    font-size: 16px;
+    text-align: start;
+  }
+
+  .hero-text {
+    text-align: center !important;
+  }
+
+  .hero-img {
+    width: 100%; /* increase image size */
+    max-width: 800px; /* bigger than desktop */
+  }
+}
+
+/* Mobile (<= 576px) */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtext {
+    font-size: 16px;
+    text-align: start;
+  }
+
+  .hero-img {
+    width: 100%;
+    max-width: 100%;
+    animation:
+      floatImage 4s ease-in-out infinite,
+      fadeSlideRight 1s ease forwards;
+  }
 }
 
 /* ANIMATIONS */

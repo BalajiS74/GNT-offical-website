@@ -29,9 +29,11 @@ const RealtimeProject = () => {
     <div
       id="realtime-project-section"
       className="py-5 position-relative overflow-hidden"
-      style={{
-        // background: "linear-gradient(135deg, #f8f9fa 0%, #e8f0e5 100%)",
-      }}
+      style={
+        {
+          // background: "linear-gradient(135deg, #f8f9fa 0%, #e8f0e5 100%)",
+        }
+      }
     >
       {/* Animated Background Elements */}
       <div
@@ -132,9 +134,9 @@ const RealtimeProject = () => {
           <div
             className="position-absolute w-100 h-100 rounded-4"
             style={{
-              background: "linear-gradient(90deg, #3a7b20, #8bc34a, #3a7b20)",
-              filter: "blur(20px)",
-              opacity: 0.3,
+              background: "linear-gradient(90deg, #c3e39fbe)",
+              filter: "blur(30px)",
+              opacity: 0.1,
               zIndex: -1,
               animation: "pulse 3s ease-in-out infinite",
             }}
@@ -153,7 +155,7 @@ const RealtimeProject = () => {
           >
             <Row className="align-items-center g-4">
               {/* Left Content with Animation */}
-              <Col md={5}>
+              <Col xs={12} lg={5}>
                 <div
                   className="text-center text-md-start"
                   style={{
@@ -247,7 +249,7 @@ const RealtimeProject = () => {
               </Col>
 
               {/* Center Image with Animation */}
-              <Col md={2} className="text-center">
+              <Col xs={12} lg={2} className="text-center">
                 <div
                   style={{
                     opacity: isVisible ? 1 : 0,
@@ -292,7 +294,7 @@ const RealtimeProject = () => {
               </Col>
 
               {/* Right Content with Animation */}
-              <Col md={5}>
+              <Col xs={12} lg={5}>
                 <div
                   className="text-center text-md-start ms-3"
                   style={{
@@ -387,7 +389,7 @@ const RealtimeProject = () => {
 
             {/* Animated Button */}
             <div className="text-center mt-5 pt-3">
-              <Link to={"RegisterPage"}>
+              <Link to={"registerpage"}>
                 <Button
                   className="position-relative overflow-hidden rounded-pill fw-bold"
                   style={{
@@ -465,6 +467,48 @@ const RealtimeProject = () => {
       </Container>
 
       <style jsx>{`
+        /* CENTER IMAGE */
+        .handshake-wrapper {
+          width: 140px;
+          height: 140px;
+          margin: 0 auto;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(
+            135deg,
+            rgba(58, 123, 32, 0.1),
+            rgba(139, 195, 74, 0.1)
+          );
+          border: 2px solid rgba(58, 123, 32, 0.2);
+        }
+
+        .handshake-img {
+          width: 80%;
+          object-fit: contain;
+        }
+
+        /* 🔥 TABLET FIX (your problem range ~978px) */
+        @media (max-width: 991px) {
+          .handshake-wrapper {
+            width: 120px;
+            height: 120px;
+            margin: 20px auto; /* spacing when stacked */
+          }
+
+          .handshake-img {
+            width: 70%;
+          }
+        }
+
+        /* MOBILE */
+        @media (max-width: 576px) {
+          .handshake-wrapper {
+            width: 100px;
+            height: 100px;
+          }
+        }
         @keyframes float {
           0%,
           100% {

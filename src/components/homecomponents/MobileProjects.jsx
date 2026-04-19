@@ -12,12 +12,9 @@ const MobileProjects = () => {
   return (
     <section style={{ padding: "40px 0", background: "#ffffff" }}>
       <div className="container">
-          {/* <h1 className="text-center fw-bold mb-4">
-            <span style={{ color: "#3a7b20" }}>App</span> Development
-          </h1> */}
         <div className="row g-3 mt-5">
           {apps.map((img, idx) => (
-            <div key={idx} className="col-md-3 col-12">
+            <div key={idx} className="col-md-3 col-6 ">
               <img
                 src={img}
                 alt={`App ${idx + 1}`}

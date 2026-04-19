@@ -31,8 +31,8 @@ const Footerbar = () => {
             {[
               { name: "Home", path: "/" },
               { name: "Service", path: "/service" },
-              { name: "Career", path: "/Career" },
-              { name: "Events", path: "/Events" },
+              { name: "Career", path: "/career" },
+              { name: "Events", path: "/events" },
               { name: "About", path: "/about" },
             ].map((item) => (
               <p key={item.name} className="mb-2">

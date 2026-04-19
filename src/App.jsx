@@ -1,15 +1,19 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
+import { Suspense, lazy } from "react";
 import Layout from "./layout/Layout";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Service from "./pages/Service";
-import GetinTouch from "./components/GetinTouch";
-import ApplyJob from "./components/ApplyJob";
-import Meet from "./components/Meet";
-import RegisterPage from "./components/RegisterPage";
-import NotFound from "./components/NotFound";
-import Career from "./pages/Career";
-import Events from "./pages/Events";
+
+// ✅ Lazy load all pages
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Service = lazy(() => import("./pages/Service"));
+const Career = lazy(() => import("./pages/Career"));
+const Events = lazy(() => import("./pages/Events"));
+
+const GetinTouch = lazy(() => import("./components/GetinTouch"));
+const ApplyJob = lazy(() => import("./components/ApplyJob"));
+const Meet = lazy(() => import("./components/Meet"));
+const RegisterPage = lazy(() => import("./components/RegisterPage"));
+const NotFound = lazy(() => import("./components/NotFound"));
 function App() {
   return (
     <HashRouter>
@@ -17,13 +21,13 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="Career" element={<Career />} />
+          <Route path="career" element={<Career />} />
           <Route path="service" element={<Service />} />
-          <Route path="GetinTouch" element={<GetinTouch />} />
-          <Route path="ApplyJob" element={<ApplyJob />} />
-          <Route path="Meet" element={<Meet />} />
-          <Route path="RegisterPage" element={<RegisterPage />} />
-          <Route path="Events" element={<Events />} />
+          <Route path="getintouch" element={<GetinTouch />} />
+          <Route path="applyjob" element={<ApplyJob />} />
+          <Route path="meet" element={<Meet />} />
+          <Route path="registerpage" element={<RegisterPage />} />
+          <Route path="events" element={<Events />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

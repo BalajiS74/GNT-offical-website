@@ -59,12 +59,11 @@ const Offering = () => {
           className="text-center mb-5"
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
         >
-          <h2 className="display-4 fw-bold">
-            What We <span>Offer</span>
+          <h2 className="display-5 fw-bold">
+            What We <span className="highlight">Offer</span>
           </h2>
-          <p className="text-muted fs-5">
+          <p className="text-muted">
             Empowering your tech journey with real impact 🚀
           </p>
         </motion.div>
@@ -72,21 +71,15 @@ const Offering = () => {
         {/* OFFER CARDS */}
         <Row className="g-4 mb-5">
           {offerings.map((item, index) => (
-            <Col md={4} key={index}>
+            <Col xs={12} sm={4} lg={4} key={index}>
               <motion.div
                 className="offer-card"
-                initial={{ opacity: 0, y: 60 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                whileHover={{ y: -10 }}
+                transition={{ delay: index * 0.2 }}
+                whileHover={{ y: -8 }}
               >
-                <motion.img
-                  src={item.img}
-                  alt=""
-                  className="offer-img"
-                  whileHover={{ scale: 1.1, rotate: 2 }}
-                />
-
+                <img src={item.img} alt="" className="offer-img" />
                 <h4>{item.title}</h4>
                 <p>{item.description}</p>
               </motion.div>
@@ -97,29 +90,17 @@ const Offering = () => {
         {/* STATS */}
         <Row className="g-4">
           {stats.map((item, index) => (
-            <Col md={4} key={index}>
+            <Col xs={12} sm={4} lg={4} key={index}>
               <motion.div
                 className="stat-card"
                 style={{ background: item.gradient }}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                whileHover={{ scale: 1.05 }}
+                transition={{ delay: index * 0.2 }}
               >
-                <motion.img
-                  src={item.img}
-                  alt=""
-                  className="stat-img"
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                />
-
+                <img src={item.img} alt="" className="stat-img" />
                 <h1>{item.value}</h1>
-                <p>{item.title}</p>
+                <p className="fw-bold">{item.title}</p>
                 <p>{item.dis}</p>
               </motion.div>
             </Col>
@@ -127,99 +108,131 @@ const Offering = () => {
         </Row>
 
         {/* CTA */}
-        <motion.div
-          className="text-center mt-5"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-        >
+        <div className="text-center mt-5">
           <p className="cta-text">
             Join thousands of learners transforming their careers ✨
           </p>
-        </motion.div>
+        </div>
       </Container>
 
-      {/* STYLES */}
-      <style>
-        {`
+      {/* CLEAN CSS */}
+      <style>{`
         .offering-section {
           padding: 80px 0;
           background: linear-gradient(to bottom, #f8faf7, #ffffff);
         }
 
-        h2 span {
+        .highlight {
           color: #3a7b20;
         }
 
         /* OFFER CARD */
         .offer-card {
-          background: white;
-          border-radius: 20px;
-          padding: 30px;
+          background: #fff;
+          border-radius: 18px;
+          padding: 25px;
           text-align: center;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-          transition: 0.3s;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
         }
 
         .offer-img {
-          width: 200px;
-          height: 200px;
+          width: 180px;
+          height: 180px;
           object-fit: contain;
-          margin-bottom: 20px;
+          margin: 0 auto 15px;
         }
 
         .offer-card h4 {
-          font-weight: 700;
+          font-weight: 600;
           margin-bottom: 10px;
         }
 
         .offer-card p {
-          color: #666;
           font-size: 14px;
+          color: #666;
         }
 
         /* STATS */
         .stat-card {
-          border-radius: 20px;
-          padding: 30px;
+          border-radius: 18px;
+          padding: 25px;
           text-align: center;
-          color: white;
-          position: relative;
-          overflow: hidden;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
         }
 
         .stat-img {
-          width: 80px;
-          margin-bottom: 15px;
+          width: 70px;
+          margin: 0 auto 10px;
         }
 
         .stat-card h1 {
-          font-size: 42px;
+          font-size: 38px;
           font-weight: bold;
         }
 
         .stat-card p {
-          font-size: 18px;
+          font-size: 16px;
           opacity: 0.9;
         }
 
         /* CTA */
         .cta-text {
-          font-size: 20px;
+          font-size: 18px;
           color: #555;
         }
 
-        /* MOBILE */
-        @media (max-width: 768px) {
-          .offer-card {
-            padding: 20px;
+        /* 🔥 TABLET CONTROL (≈ 978px - 991px) */
+        @media (max-width: 991px) {
+          .offer-img {
+            width: 140px;
+            height: 140px;
+          }
+
+          .offer-card h4 {
+            font-size: 18px;
+          }
+
+          .offer-card p {
+            font-size: 13px;
+          }
+
+          .stat-img {
+            width: 55px;
           }
 
           .stat-card h1 {
-            font-size: 32px;
+            font-size: 28px;
+          }
+
+          .stat-card p {
+            font-size: 14px;
           }
         }
-        `}
-      </style>
+
+        /* MOBILE */
+        @media (max-width: 576px) {
+          .offer-img {
+            width: 120px;
+            height: 120px;
+          }
+
+          .stat-card h1 {
+            font-size: 24px;
+          }
+
+          .cta-text {
+            font-size: 16px;
+          }
+        }
+      `}</style>
     </section>
   );
 };

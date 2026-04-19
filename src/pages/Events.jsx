@@ -66,7 +66,7 @@ const Events = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="fw-bold display-4">
-            Discover Our <span className="text-success">Events</span>
+            Discover Our <span style={{color:"#3a7b20"}}>Events</span>
           </h1>
           <p className="lead text-muted">
             Learn, grow, and explore exciting opportunities every week 🚀

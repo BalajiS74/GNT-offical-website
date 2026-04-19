@@ -51,7 +51,7 @@ const CareerComponent = () => {
         {
           id: 1,
           title: "Trainer",
-          level: "internship",
+          level: "Trainer",
           experience: "1-2 Years",
           salary: "₹10,000 above / Month",
           location: "Remote / Bangalore",
@@ -403,7 +403,7 @@ const CareerComponent = () => {
             }}
           >
             <p className="text-black mb-3">Don't see the perfect role?</p>
-            <Link to="/ApplyJob">
+            <Link to="/applyjob">
               <button
                 className="btn px-5 py-3 rounded-pill fw-bold"
                 style={{

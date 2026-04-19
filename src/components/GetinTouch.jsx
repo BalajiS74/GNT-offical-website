@@ -163,7 +163,7 @@ const GetinTouch = () => {
           <h4 className="fw-bold">Wanna Join Our Team?</h4>
           <p>Have a Happy Learning Journey</p>
 
-          <Link to="/ApplyJob">
+          <Link to="/appljob">
             <GlobalBtn btnName="Apply" px="5" />
           </Link>
         </motion.div>
