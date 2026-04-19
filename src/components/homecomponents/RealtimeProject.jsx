@@ -76,7 +76,7 @@ const RealtimeProject = () => {
             transition: "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)",
           }}
         >
-          <p className="fw-bold mb-3" style={{ fontSize: "42px" }}>
+          <p className="fw-bold mb-3 h1">
             Want work with{" "}
             <span
               className="position-relative d-inline-block"
@@ -106,7 +106,7 @@ const RealtimeProject = () => {
               🚀
             </span>
           </p>
-          <div
+          {/* <div
             style={{
               width: "60px",
               height: "3px",
@@ -118,7 +118,7 @@ const RealtimeProject = () => {
               transition: "all 0.6s ease-out 0.2s",
               transformOrigin: "center",
             }}
-          />
+          /> */}
         </div>
 
         {/* Main Animated Box */}

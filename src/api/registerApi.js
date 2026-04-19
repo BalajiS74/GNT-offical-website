@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://gnt-official-website-backend.onrender.com/api";
 
 export const registerUser = async (data) => {
   try {

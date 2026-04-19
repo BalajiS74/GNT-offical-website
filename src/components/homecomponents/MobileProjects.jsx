@@ -14,25 +14,34 @@ const MobileProjects = () => {
       <div className="container">
         <div className="row g-3 mt-5">
           {apps.map((img, idx) => (
-            <div key={idx} className="col-md-3 col-6 ">
-              <img
-                src={img}
-                alt={`App ${idx + 1}`}
-                className="app-img"
-                height={"400px"}
-              />
+            <div key={idx} className="col-6 col-md-6 col-lg-3">
+              <div className="app-card">
+                <img src={img} alt={`App ${idx + 1}`} className="app-img" />
+              </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Styles */}
+      {/* INTERNAL CSS */}
       <style>{`
+        .app-card {
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 6px 20px rgba(0, 128, 0, 0.25);
+          background: #fff;
+        }
+
         .app-img {
-          object-fit: cover;
-          border-radius: 8px;
+          width: 100%;
+          height: auto; /* ✅ FULL HEIGHT */
           display: block;
-          box-shadow: 0 6px 20px rgba(0, 128, 0, 0.4); /* green shade */
+        }
+
+        /* Optional: slight hover */
+        .app-card:hover {
+          transform: translateY(-5px);
+          transition: 0.3s;
         }
       `}</style>
     </section>

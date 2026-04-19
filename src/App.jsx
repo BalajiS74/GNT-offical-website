@@ -8,6 +8,7 @@ const About = lazy(() => import("./pages/About"));
 const Service = lazy(() => import("./pages/Service"));
 const Career = lazy(() => import("./pages/Career"));
 const Events = lazy(() => import("./pages/Events"));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
 
 const GetinTouch = lazy(() => import("./components/GetinTouch"));
 const ApplyJob = lazy(() => import("./components/ApplyJob"));
@@ -28,6 +29,7 @@ function App() {
           <Route path="meet" element={<Meet />} />
           <Route path="registerpage" element={<RegisterPage />} />
           <Route path="events" element={<Events />} />
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
