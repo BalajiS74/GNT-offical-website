@@ -1,0 +1,1 @@
+import{n as e,s as t}from"./jsx-runtime-DyTGnfRu.js";var n=t(e()).createContext(null);n.displayName=`CardHeaderContext`;export{n as t};

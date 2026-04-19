@@ -1,0 +1,1 @@
+import{n as e,t}from"./jsx-runtime-DyTGnfRu.js";e();var n=t(),r=({btnName:e,px:t=3,py:r=2,style:i={}})=>(0,n.jsx)(`button`,{className:`px-${t} py-${r} rounded`,style:{backgroundColor:`#3a7b20`,border:`none`,color:`white`,textDecoration:`none`,...i},children:e});export{r as t};
